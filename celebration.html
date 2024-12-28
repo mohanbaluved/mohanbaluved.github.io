@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Time Journey</title>
+    <link rel="stylesheet" href="celebration.css">
+    <script defer src="celebration.js"></script>
+</head>
+<body>
+    <!-- Background Animation -->
+    <div id="background"></div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <h1 class="fancy-title">🎉 Celebrating Every Moment Since 29th December 2004! 🎉</h1>
+        <div id="dynamic-section">
+            <p id="calculated-time" class="dynamic-time"></p>
+            <div id="countdown-circle">
+                <div class="progress-ring">
+                    <svg height="150" width="150">
+                        <circle class="circle-background" cx="75" cy="75" r="70" stroke="#ccc" stroke-width="10" fill="transparent" />
+                        <circle class="circle-progress" cx="75" cy="75" r="70" stroke="white" stroke-width="10" fill="transparent" stroke-dasharray="440" stroke-dashoffset="0" />
+                    </svg>
+                    <p id="circle-seconds" class="circle-text">0</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="flirty-section">
+            <p id="flirty-quote"></p>
+        </div>
+
+        <!-- Dancing Button -->
+        <button id="dancing-btn" class="hidden" onclick="location.href='our-meet.html'">Padda Podam</button>
+    </div>
+</body>
+</html>

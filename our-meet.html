@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Meet - Destiny</title>
+    <link rel="stylesheet" href="our-meet.css">
+</head>
+<body>
+    <div class="content">
+        <!-- Heading positioned at top left -->
+        <h2 class="page-title">Our Meet - A Destiny</h2>
+
+        <!-- Story Section centered on the page -->
+        <div class="sub-category" id="our-meet">
+            <!-- Content like messages and GIFs go here -->
+            <div class="story-section">
+                <p>Manam kalavadam oka daiva nirnayam (Destiny).</p>
+            </div>
+            <div class="story-section">
+                <p>June-3, pakkana evaru aina unaru aa ani vachi kurchunav around 10:20 ki.</p>
+            </div>
+            <div class="story-section">
+                <p>11:30 ki nato godava petukunav, donga mokam dhana.</p>
+            </div>
+            
+            <div class="story-section">
+                <p>My reaction:</p>
+                <img src="rey-evarra-meerantha.gif" alt="Reaction GIF" class="reaction-image">
+            </div>
+            <div class="story-section">
+                <p>Apudu anukuna aslu ee papa tho chala jagarta ga undali ani.</p>
+            </div>
+            <div class="story-section">
+                <p>Slow ga manam akka, thamudu anukodam start chesam.</p>
+            </div>
+            <div class="story-section">
+                <p>Slow ga meku feelings anaru, naku chepa ledu.</p>
+            </div>
+            <div class="story-section">
+                <p>Ending lo Rishi akka tho matladitey jealous ai poindi papam.</p>
+            </div>
+            <div class="story-section">
+                <p>After listening to this, my reaction: Cutie.</p>
+            </div>
+            <div class="story-section">
+                <img src="cute-adorable.gif" alt="Reaction GIF" class="reaction-image">
+            </div>
+        </div>
+
+        <!-- Button displayed after content -->
+        <div class="button-container" id="next-btn-container">
+            <button class="next-btn" onclick="startHeartRain()">Mundu ki podam aa</button>
+        </div>
+
+        <!-- Heart Rain Animation -->
+        <div class="heart-rain" id="heart-rain"></div>
+    </div>
+
+    <script>
+        function showButton() {
+            const buttonContainer = document.getElementById('next-btn-container');
+            buttonContainer.classList.add('visible');
+        }
+
+        function startHeartRain() {
+            const heartRain = document.getElementById('heart-rain');
+            
+            heartRain.classList.add('active');
+            setTimeout(() => {
+                heartRain.classList.remove('active');
+                window.location.href = "hostel-starting.html"; 
+            }, 5000); 
+        }
+
+        // Make the button visible after the last story section animation is complete
+        window.onload = function() {
+            setTimeout(showButton, 50 * 1000);
+        };
+    </script>
+</body>
+</html>

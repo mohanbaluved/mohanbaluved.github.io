@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Starting - A Journey</title>
+    <link rel="stylesheet" href="hostel-starting.css">
+</head>
+<body>
+    <div class="content">
+        <h2 class="page-title">Hostel Starting - A Journey</h2>
+
+        <div class="sub-category">
+            <div class="story-section">
+                <p>Starting lo idk, naku ni meda feelings unai oo levu oo, epudu room loo kurchuney nenu ni kosam room lo nunchi bayata ki vacha.</p>
+            </div>
+            <div class="story-section">
+                <p>Roju manam max 30min-1h kurchuney valam, 1st day manam kalisam manam clg lo 5-aug.</p>
+            </div>
+            <div class="story-section">
+                <p>Slow ga manam epudu velam oo kani we went to ship, apudu relationship vadu anav.</p>
+            </div>
+            <div class="story-section">
+                <p>My reaction: </p>
+                <img src="deadpool-wtf.gif" alt="Deadpool WTF Reaction" class="reaction-image">
+            </div>
+            <div class="story-section">
+                <p>Taravta ki ardam aindi papa ki time padtundi ani.</p>
+            </div>
+            <div class="story-section">
+                <p>Naa charector uu, andam chusi padi poyav 😁😛</p>
+            </div>
+            <div class="story-section">
+                <p>Inka edi oo edi oo aindi madyalo.</p>
+            </div>
+            <div class="story-section">
+                <p>Do you remember?</p>
+            </div>
+            <div class="story-section">
+                <p>Ni hand patukundi 1st epudu ani: It's 21 Aug.</p>
+            </div>
+            <div class="story-section">
+                <p>Ni hands ki kiss chesindi and ninu kiss chesindi and when we cuddled first and etc..</p>
+            </div>
+            <div class="story-section">
+                <p>Naku share cheskovali ani undiiiiiiiiiiiiiiiii, but I can't.</p>
+            </div>
+            <div class="story-section">
+                <p>1st time manam tinadi matram maggie, nuvu aa roju gola kuda chesav nuvu ey konta ani.</p>
+            </div>
+        </div>
+
+        <!-- Button container (hidden initially) -->
+        <div class="button-container" id="button-container" style="display:none;">
+            <button class="next-btn" onclick="navigateToNextPage()">Veldam paa time avtundi</button>
+        </div>
+
+        <!-- Heart rain container (hidden initially) -->
+        <div class="heart-rain" id="heart-rain"></div>
+
+    </div>
+
+    <script>
+        function showButton() {
+            const buttonContainer = document.getElementById('button-container');
+            buttonContainer.style.display = "block"; // Show the button
+        }
+
+        function startHeartRain() {
+            const heartRain = document.getElementById('heart-rain');
+            heartRain.classList.add('active'); // Add class to start heart fall animation
+        }
+
+        function navigateToNextPage() {
+            window.location.href = "Bday.html"; // Adjust the link as required
+        }
+
+        // Make the button visible after all animations complete
+        window.onload = function() {
+            // Start the heart rain animation
+            startHeartRain();
+            
+            // Show the button after the story and hearts animation (60s + heart animation delay)
+            setTimeout(showButton, 65 * 1000); // Show after a total of 65 seconds
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background */
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #f39c12, #8e44ad, #3498db);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+    z-index: -1;
+}
+
+/* Animating Gradient Background */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Main Content Styling */
+#main-content {
+    text-align: center;
+    color: white;
+    padding: 50px;
+}
+
+.fancy-title {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px #000;
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#dancing-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #fc6f9b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+    animation: dance 1s ease-in-out infinite;
+    display: inline-block;
+}@keyframes dance {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/* Dynamic Section */
+.dynamic-time {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    text-shadow: 1px 1px #000;
+}
+
+#countdown-circle {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border: 5px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: glowEffect 1s ease-in-out infinite;
+}
+
+.circle-text {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+@keyframes glowEffect {
+    0%, 100% {
+        box-shadow: 0 0 20px #fff;
+    }
+    50% {
+        box-shadow: 0 0 40px #fff;
+    }
+}
+
+/* Flirty Section */
+#flirty-section {
+    margin: 20px 0;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+/* Progress Ring for countdown */
+.progress-ring {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-background {
+    transition: stroke-dashoffset 1s;
+}
+
+.circle-progress {
+    transition: stroke-dashoffset 1s;
+    transform: rotate(-90deg);
+}
+
+/* Use JS to animate this circle dynamically with seconds value */
+.circle-text {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}

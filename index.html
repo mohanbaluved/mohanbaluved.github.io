@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Birthday Surprise</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="welcome-message">Welcome Buji Konda Luu 💕</h1>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required placeholder="Enter Username" />
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Enter Password" />
+            <br>
+            <button type="submit" id="login-button">Login</button>
+        </form>
+
+        <div id="message"></div>
+
+        <!-- Hint Link -->
+        <a href="#" id="hint-link" class="hidden">Need a Hint? Click here ❤️</a>
+
+        <!-- Hint Section -->
+        <div id="hint-section" class="hidden">
+            <img src="PUPPY.png" alt="Hint Image" />
+            <p class="hint-message">Just like the stars shine bright, so does our connection!</p>
+            <span class="close-btn" onclick="closeHint()">X</span>
+        </div>
+    </div>
+</body>
+</html>

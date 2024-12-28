@@ -1,0 +1,210 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Style */
+body {
+    background-color: #fef2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Hide overflow during animations */
+    margin: 0;
+}
+
+/* Content Section */
+.content {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+}
+
+/* Title Style: Keeping title at top left */
+.page-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5rem;
+    color: #fc6f9b;
+}
+
+/* Sub Category for the Story Section */
+.sub-category {
+    position: relative;
+    width: 100%;
+}
+
+/* Story Section Styling for Sequential Entries */
+.story-section {
+    opacity: 0;
+    transform: translateY(-30px); 
+    margin: 0;
+    animation: fadeInOut 10s ease-out forwards;  
+    position: absolute;
+    width: 100%;
+}
+
+/* Text Styling */
+.story-section p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+/* Reaction Image Styling */
+.reaction-image {
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Fading and Sliding Animation for Messages */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);  
+    }
+    5% {
+        opacity: 1;
+        transform: translateY(0);  
+    }
+    45% {
+        opacity: 1;
+        transform: translateY(0);  
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(30px);  
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(30px);  
+    }
+}
+
+/* Adding Sequential Delays for Each Message */
+.story-section:nth-child(1) {
+    animation-delay: 0s;
+}
+.story-section:nth-child(2) {
+    animation-delay: 5s;
+}
+.story-section:nth-child(3) {
+    animation-delay: 10s;
+}
+.story-section:nth-child(4) {
+    animation-delay: 15s;
+}
+.story-section:nth-child(5) {
+    animation-delay: 20s;
+}
+.story-section:nth-child(6) {
+    animation-delay: 25s;
+}
+.story-section:nth-child(7) {
+    animation-delay: 30s;
+}
+.story-section:nth-child(8) {
+    animation-delay: 35s;
+}
+.story-section:nth-child(9) {
+    animation-delay: 40s;
+}
+.story-section:nth-child(10) {
+    animation-delay: 45s;
+}
+
+/* Button styling */
+.button-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    visibility: hidden;
+}
+
+.button-container.visible {
+    visibility: visible; 
+}
+
+.next-btn {
+    background-color: #fc6f9b;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.next-btn:hover {
+    background-color: #fa507c;
+}
+
+/* Heart Rain Container - covering the whole window */
+.heart-rain {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 10;
+    visibility: hidden;  
+}
+
+/* Active class for displaying heart rain */
+.heart-rain.active {
+    visibility: visible;  
+    animation: heart-fall 5s infinite; 
+}
+
+/* Heart Fall Animation */
+@keyframes heart-fall {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(100vh); 
+    }
+}
+
+/* Heart Shape Styling */
+.heart-rain::after, .heart-rain::before {
+    content: "❤️";
+    position: absolute;
+    font-size: 3rem;
+    animation: heart-fall 2s infinite linear;
+}
+
+/* Making hearts fall from random locations and stagger their animation */
+.heart-rain::after {
+    left: 10%;
+    animation-delay: -1s;  
+}
+
+.heart-rain::before {
+    left: 50%;
+    animation-delay: -2s;
+}
+
+.heart-rain::before,
+.heart-rain::after {
+    animation-timing-function: ease-in;
+    opacity: 0.8;
+}
